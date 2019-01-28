@@ -171,7 +171,7 @@ module view {
             Laya.timer.clear(this, this.onLoop);
             this.wing.stop();
             this.off(Laya.Event.CLICK, this, this.jump);
-            GameUIManager.Instance.OpenUIResult();
+            GameUIManager.Instance.OpenUIResult(1);
             console.log("撞到障碍物 Game Over");
         }
 
