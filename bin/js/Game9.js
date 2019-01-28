@@ -82,9 +82,9 @@ var view;
             this.rightShot.skin = this.IsLeftCusp == false ? "Game1/t3.png" : "Game1/t4.png";
             this.leftShot.skewY = this.IsLeftCusp == true ? 0 : 180;
             this.rightShot.skewY = this.IsLeftCusp == true ? 0 : 180;
-            this.leftPlayer.skin = this.IsLeftCusp == true ? "Game1/zhu_c.png" : "Game2/hongbao_c.png";
+            this.leftPlayer.skin = this.IsLeftCusp == true ? PlayerManager.Instance.GetUsedSkinUrl() : "Game2/hongbao_c.png";
             this.leftPlayer.skewY = this.IsLeftCusp == true ? 180 : 0;
-            this.rightPlayer.skin = this.IsLeftCusp == false ? "Game1/zhu_c.png" : "Game2/hongbao_c.png";
+            this.rightPlayer.skin = this.IsLeftCusp == false ? PlayerManager.Instance.GetUsedSkinUrl() : "Game2/hongbao_c.png";
             this.rightPlayer.skewY = this.IsLeftCusp == false ? 0 : 180;
             //初始方向
             this.LeftIsMoveUp = Math.random() < 0.5 ? true : false;

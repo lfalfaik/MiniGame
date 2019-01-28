@@ -14,70 +14,6 @@
     "child":[
         {
             "x":15,
-            "type":"Image",
-            "props":{"y":280,"x":86,"width":557,"skin":"UILoading/logo.png","name":"logo","height":263},
-            "nodeParent":1,
-            "label":"Image(logo)",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":4,
-            "child":[
-                ],
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Label",
-            "props":{"y":689,"x":109,"width":500,"var":"lab_value","text":"Loading(100%)","name":"lab_value","height":52,"fontSize":42,"font":"Microsoft YaHei","color":"#941a14","alpha":1,"align":"center"},
-            "nodeParent":1,
-            "label":"Label(lab_value)",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":11,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":755,"x":89,"width":504,"skin":"UILoading/slider_g.png","height":66},
-            "nodeParent":1,
-            "label":"Image",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":24,
-            "child":[
-                {
-                    "type":"Image",
-                    "props":{"y":4,"x":5,"var":"bg2","skin":"UILoading/slider_f.png","name":"bg2"},
-                    "nodeParent":24,
-                    "label":"Image(bg2)",
-                    "isOpen":true,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":17,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":-13,"x":-12,"width":342,"var":"slider","skin":"tongyong/bg_mask.png","renderType":"mask","name":"slider","height":80},
-                            "nodeParent":17,
-                            "label":"Image(slider)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":23,
-                            "child":[
-                                ]
-                        }]
-                }]
-        },
-        {
-            "x":15,
             "type":"Box",
             "props":{"y":109,"x":47,"var":"star","renderType":"render","name":"star"},
             "nodeParent":1,
@@ -154,6 +90,95 @@
                     "$HIDDEN":false
                 }],
             "$HIDDEN":true
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "props":{"y":0,"x":360,"var":"ui_top"},
+            "nodeParent":1,
+            "label":"Label(ui_top)",
+            "isOpen":null,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":42,
+            "child":[
+                {
+                    "type":"Image",
+                    "props":{"y":280,"x":-274,"width":557,"skin":"UILoading/logo.png","name":"logo","height":263},
+                    "nodeParent":42,
+                    "label":"Image(logo)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":4,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                }]
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "props":{"y":1280,"x":370,"var":"ui_bottom"},
+            "nodeParent":1,
+            "label":"Label(ui_bottom)",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":43,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"y":-525,"x":-281,"width":504,"skin":"UILoading/slider_g.png","height":66},
+                    "nodeParent":43,
+                    "label":"Image",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":24,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "props":{"y":4,"x":5,"var":"bg2","skin":"UILoading/slider_f.png","name":"bg2"},
+                            "nodeParent":24,
+                            "label":"Image(bg2)",
+                            "isOpen":true,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":17,
+                            "child":[
+                                {
+                                    "type":"Image",
+                                    "props":{"y":-13,"x":-12,"width":342,"var":"slider","skin":"tongyong/bg_mask.png","renderType":"mask","name":"slider","height":80},
+                                    "nodeParent":17,
+                                    "label":"Image(slider)",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":23,
+                                    "child":[
+                                        ]
+                                }]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "props":{"y":-591,"x":-261,"width":500,"var":"lab_value","text":"Loading(100%)","name":"lab_value","height":52,"fontSize":42,"font":"Microsoft YaHei","color":"#941a14","alpha":1,"align":"center"},
+                    "nodeParent":43,
+                    "label":"Label(lab_value)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":11,
+                    "child":[
+                        ]
+                }]
         }],
     "animations":[
         {

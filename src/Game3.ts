@@ -18,7 +18,7 @@ module view {
         private ReviveTimes: number = 0;
         constructor() {
             super();
-            this.PosArr.push(new Vector2(170, 1070), new Vector2(367, 1070), new Vector2(545, 1070));
+            this.PosArr.push(new Vector2(170, 985), new Vector2(367, 985), new Vector2(545, 985));
             var info: ModelInfo = ModelManager.Instance.GetInfoById(3);
             this.ModelData = ModelManager.Instance.GetDataById(info._id);
             if (this.ModelData != null)
@@ -164,7 +164,7 @@ module view {
             Laya.timer.frameLoop(1, this, this.Move);
         }
         Move(): void {
-            if (this.y >= 1047) {
+            if (this.y >= 985) {
                 if (this.HitDel != null) {
                     this.HitDel.runWith(this);
                 }

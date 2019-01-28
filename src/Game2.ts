@@ -4,7 +4,7 @@
 module view {
     export class Game2 extends ui.Game2UI {
         private IsLeftDown: boolean = false;
-        private PlayerPos: Array<number> = [1070, 960];
+        private PlayerPos: Array<number> = [974, 863];
         private HitHandler: Laya.Handler;
         private Point: number = 0;
         private IsGameOver: boolean = false;
@@ -158,7 +158,7 @@ class Game2Money extends Laya.Image {
         this.skin = "Game2/hongbao_c.png";
 
         this.x = leftOrRight == 1 ? -this.width / 4 : Laya.stage.width + this.width / 4;
-        this.y = upOrDown == true ? 1000 : 1125;
+        this.y = upOrDown == true ? 803 : 928;
 
         this.size(325, 227);
 
@@ -170,7 +170,7 @@ class Game2Money extends Laya.Image {
     }
     OnLoop(): void {
         if (this.LeftOrRight == 1) {
-            if (this.x >= 100) {
+            if (this.x >= 130) {
                 if (this.HitDel != null) {
                     this.HitDel.runWith(this);
                 }
@@ -179,7 +179,7 @@ class Game2Money extends Laya.Image {
             this.x += this.Speed;
         }
         else if (this.LeftOrRight == 2) {
-            if (this.x <= 620) {
+            if (this.x <= 590) {
                 // if (this.HitDel != null) {
                 //     this.HitDel.runWith(this);
                 // }

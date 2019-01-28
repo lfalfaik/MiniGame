@@ -39,7 +39,7 @@ var ConfigManager = /** @class */ (function (_super) {
         var _this = this;
         this._loadFunc = func;
         this._loadNum = 0;
-        this._totalNum = 4; //所有的配置文件数量
+        this._totalNum = 5; //所有的配置文件数量
         {
             ConstDataManager.Instance.InitConf(function () {
                 _this.OnLoadOnConf();
@@ -51,6 +51,9 @@ var ConfigManager = /** @class */ (function (_super) {
                 _this.OnLoadOnConf();
             });
             ModelManager.Instance.InitConf(function () {
+                _this.OnLoadOnConf();
+            });
+            NameManager.Instance.InitConf(function () {
                 _this.OnLoadOnConf();
             });
         }

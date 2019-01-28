@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":5,
+    "selecteID":11,
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
     "label":"View",
@@ -54,9 +54,22 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":1170,"x":130,"skin":"Game1/t2.png"},
+            "props":{"y":985,"x":217,"width":100,"var":"player1","pivotY":0,"pivotX":50,"name":"player1","height":100},
             "nodeParent":1,
-            "label":"Image",
+            "label":"Image(player1)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":5,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "props":{"y":1150,"x":360,"var":"bottomBg","skin":"Game1/t2.png","pivotY":65,"pivotX":230,"name":"bottomBg"},
+            "nodeParent":1,
+            "label":"Image(bottomBg)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
@@ -67,13 +80,13 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":1070,"x":215,"width":100,"var":"player1","pivotY":0,"pivotX":50,"name":"player1","height":100},
+            "props":{"y":1196,"x":0,"skin":"Game7/d.png"},
             "nodeParent":1,
-            "label":"Image(player1)",
+            "label":"Image",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":5,
+            "compId":12,
             "child":[
                 ]
         }],

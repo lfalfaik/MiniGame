@@ -25,7 +25,7 @@ var view;
             _this.PlayerPoint = 0;
             _this.NextMoneyTime = 0;
             _this.ReviveTimes = 0;
-            _this.PosArr.push(new Vector2(170, 1070), new Vector2(367, 1070), new Vector2(545, 1070));
+            _this.PosArr.push(new Vector2(170, 985), new Vector2(367, 985), new Vector2(545, 985));
             var info = ModelManager.Instance.GetInfoById(3);
             _this.ModelData = ModelManager.Instance.GetDataById(info._id);
             if (_this.ModelData != null)
@@ -172,7 +172,7 @@ var view;
             Laya.timer.frameLoop(1, this, this.Move);
         };
         Game3Money.prototype.Move = function () {
-            if (this.y >= 1047) {
+            if (this.y >= 985) {
                 if (this.HitDel != null) {
                     this.HitDel.runWith(this);
                 }

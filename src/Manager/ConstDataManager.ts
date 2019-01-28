@@ -19,11 +19,11 @@ class ConstDataManager  extends Singleton{
 
     public InitConf(func : Function)
     {
-        ConfigManager.Instance.LoadConf("ConstValue",(jsonObj:JSON)=>{
+        ConfigManager.Instance.LoadConf("Const",(jsonObj:JSON)=>{
             this.OnParseConf(jsonObj,func);
             if(func != null)
             {
-                Debuger.Log("1.读取 ConstValue.json Succ");
+                Debuger.Log("1.读取 Const.json Succ");
                 func();
             }
         });

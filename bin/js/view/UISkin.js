@@ -32,6 +32,8 @@ var view;
             _this._mouseSpeed = 0;
             _this._mouseStartPosX = 0;
             _this._curMoveFrame = 0;
+            _this.itemMaxScale = StringDefine.skinBigNumber;
+            _this.itemMinScale = StringDefine.skinSmallNumber;
             return _this;
         }
         UISkin.prototype.onShow = function () {
@@ -224,13 +226,13 @@ var view;
          */
         UISkin.prototype.onScrollMouse = function (e) {
             // 移动ScrollView时其中单元格缩放
-            if (e.type == Laya.Event.MOUSE_DOWN) {
+            if (e == Laya.Event.MOUSE_DOWN) {
                 this.mouseDown();
             }
-            else if (e.type == Laya.Event.MOUSE_UP) {
+            else if (e == Laya.Event.MOUSE_UP) {
                 this.mouseUp();
             }
-            else if (e.type == Laya.Event.MOUSE_MOVE) {
+            else if (e == Laya.Event.MOUSE_MOVE) {
                 this.mouseMove();
             }
         };
@@ -400,6 +402,7 @@ var view;
                 return;
             if (this._CurData.get_type == GetSkinType.GoldCoinBuy) {
                 if (this._CurData.need_num > PlayerManager.Instance.GetGoldCoinCount()) {
+                    GameUIManager.Instance.OpenUITips("资源不足");
                     Debuger.Log("金币不足");
                     return;
                 }
@@ -431,7 +434,7 @@ var Item = /** @class */ (function (_super) {
         _this.role = new Laya.Image();
         _this.role.width = 500;
         _this.role.height = 400;
-        _this.role.scale(0.6, 0.6);
+        _this.role.scale(StringDefine.skinSmallNumber, StringDefine.skinSmallNumber);
         _this.role.anchorX = 0.5;
         _this.role.anchorY = 0.5;
         _this.role.pos(_this.width / 2, _this.height / 2);

@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":65,
+    "selecteID":62,
     "props":{"y":0,"x":0,"width":720,"sceneColor":null,"height":1280},
     "nodeParent":-1,
     "label":"View",
@@ -162,7 +162,8 @@
                                 ]
                         }],
                     "$HIDDEN":false
-                }]
+                }],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -201,7 +202,8 @@
                                 ]
                         }],
                     "$HIDDEN":false
-                }]
+                }],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -240,7 +242,8 @@
                                 ]
                         }],
                     "$HIDDEN":false
-                }]
+                }],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -469,7 +472,8 @@
                                 ]
                         }],
                     "$HIDDEN":false
-                }]
+                }],
+            "$HIDDEN":false
         }],
     "animations":[
         {

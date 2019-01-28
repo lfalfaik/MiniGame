@@ -282,8 +282,8 @@ var ScrollView = /** @class */ (function (_super) {
     // ----------------------- mouse event start ------------------------
     ScrollView.prototype.mouseDown = function () {
         if (this._mouseHandler != null) {
-            var e = new Event(Laya.Event.MOUSE_DOWN);
-            this._mouseHandler.runWith([e]);
+            // var e: Event = new Event(Laya.Event.MOUSE_DOWN);
+            this._mouseHandler.runWith([Laya.Event.MOUSE_DOWN]);
         }
     };
     /**
@@ -291,8 +291,8 @@ var ScrollView = /** @class */ (function (_super) {
      */
     ScrollView.prototype.mouseUp = function (event) {
         if (this._mouseHandler != null) {
-            var e = new Event(Laya.Event.MOUSE_UP);
-            this._mouseHandler.runWith([e]);
+            // var e: Event = new Event(Laya.Event.MOUSE_UP);
+            this._mouseHandler.runWith([Laya.Event.MOUSE_UP]);
         }
     };
     /**
@@ -300,8 +300,8 @@ var ScrollView = /** @class */ (function (_super) {
      */
     ScrollView.prototype.mouseMove = function () {
         if (this._mouseHandler != null) {
-            var e = new Event(Laya.Event.MOUSE_MOVE);
-            this._mouseHandler.runWith([e]);
+            // var e: Event = new Event(Laya.Event.MOUSE_MOVE);
+            this._mouseHandler.runWith([Laya.Event.MOUSE_MOVE]);
         }
     };
     return ScrollView;

@@ -391,6 +391,7 @@ class ModelData {
     score: number;
     phase: string;
     open: string;
+    life:string;
 
     public IsOpen()
     {

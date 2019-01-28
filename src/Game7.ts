@@ -22,6 +22,7 @@ module view {
         private playerBody: Laya.Sprite;
         private wing: Laya.Animation;
         private accelerSpeed: number;
+        private reviveTimes:number = 0;
         constructor() {
             super();
             this.wing = new Laya.Animation();
@@ -74,10 +75,14 @@ module view {
         }
         // 继续游戏
         OnGameContinue() {
+            if(this.reviveTimes >=1)
+                return;
             this.clearHinder();
             this.init();
+            this.reviveTimes++;
         }
         private init() {
+            this.reviveTimes = 0;
             this.dynMoveManager = new DynMoveManager((this.getChildByName("dynMoveArea")) as Laya.Sprite);
             this.hinderManager = new HinderManager((this.getChildByName("hinderGroup")) as Laya.Sprite);
             this.playerBody = this.player;
@@ -171,7 +176,7 @@ module view {
             Laya.timer.clear(this, this.onLoop);
             this.wing.stop();
             this.off(Laya.Event.CLICK, this, this.jump);
-            GameUIManager.Instance.OpenUIResult(1);
+            GameUIManager.Instance.OpenUIResult(this.reviveTimes);
             console.log("撞到障碍物 Game Over");
         }
 

@@ -45,6 +45,8 @@ class GameUIManager extends Singleton {
         GameUIManager.Instance.openUIPanel(UIName.UILoading);
         if (this.uiLoading == null) {
             this.uiLoading = new view.UILoading();
+            GameConfig.uiResize(this.uiLoading.ui_bottom);
+            GameConfig.uiResize(this.uiLoading.ui_top);
         } else {
             this.uiLoading.visible = true;
         }
@@ -228,6 +230,7 @@ class GameUIManager extends Singleton {
         
         if (this.uiTryPlay == null) {
             this.uiTryPlay = new view.UITryPlay();
+             GameConfig.uiResize(this.uiTryPlay.ui_top);
         } else {
             this.uiTryPlay.visible = true;
         }
@@ -240,6 +243,9 @@ class GameUIManager extends Singleton {
         RankManager.Instance.OnGetRankInfosSucc();
         if (this.uiRank == null) {
             this.uiRank = new view.UIRank();
+            GameConfig.uiResize(this.uiRank.ui_bottom);
+            GameConfig.uiResize(this.uiRank.ui_top);
+            GameConfig.uiResize(this.uiRank.ui_topleft);
         } else {
             this.uiRank.visible = true;
         }
@@ -252,6 +258,8 @@ class GameUIManager extends Singleton {
         let score: number = ModelManager.Instance._CurScore;
         if (this.uiResult == null) {
             this.uiResult = new view.UIResult();
+            GameConfig.uiResize(this.uiResult.ui_bottom);
+            GameConfig.uiResize(this.uiResult.ui_top);
         } else {
             this.uiResult.visible = true;
         }
@@ -262,6 +270,8 @@ class GameUIManager extends Singleton {
     openUIBattle(): void {
         if (this.uiBattle == null) {
             this.uiBattle = new view.UIBattle();
+            GameConfig.uiResize(this.uiBattle.ui_top);
+            GameConfig.uiResize(this.uiBattle.ui_topleft);
         } else {
             this.uiBattle.visible = true;
         }
@@ -273,6 +283,9 @@ class GameUIManager extends Singleton {
         GameUIManager.Instance.openUIPanel(UIName.UISkin);
         if (this.uiSkin == null) {
             this.uiSkin = new view.UISkin();
+            GameConfig.uiResize(this.uiSkin.ui_bottom);
+            GameConfig.uiResize(this.uiSkin.ui_top);
+            GameConfig.uiResize(this.uiSkin.ui_top_left);
         } else {
             this.uiSkin.visible = true;
         }

@@ -25,6 +25,8 @@ export class UISkin extends ui.UISkinUI{
 
     constructor(){
         super();
+        this.itemMaxScale = StringDefine.skinBigNumber;
+        this.itemMinScale = StringDefine.skinSmallNumber;
     }
 
     onShow()
@@ -254,13 +256,13 @@ export class UISkin extends ui.UISkinUI{
      * ScrollView鼠标操作响应
      * @param e 
      */
-    private onScrollMouse(e: Event) {
+    private onScrollMouse(e: string) {
         // 移动ScrollView时其中单元格缩放
-        if (e.type == Laya.Event.MOUSE_DOWN) {
+        if (e == Laya.Event.MOUSE_DOWN) {
             this.mouseDown();
-        } else if(e.type == Laya.Event.MOUSE_UP) {
+        } else if(e == Laya.Event.MOUSE_UP) {
             this.mouseUp();
-        } else if (e.type == Laya.Event.MOUSE_MOVE) {
+        } else if (e == Laya.Event.MOUSE_MOVE) {
             this.mouseMove();
         }
     }
@@ -455,6 +457,7 @@ export class UISkin extends ui.UISkinUI{
         {
             if (this._CurData.need_num > PlayerManager.Instance.GetGoldCoinCount())
             {
+                GameUIManager.Instance.OpenUITips("资源不足");
                 Debuger.Log("金币不足");
                 return;
             }
@@ -489,7 +492,7 @@ class Item extends Laya.Box {
         this.role = new Laya.Image();
         this.role.width = 500;
         this.role.height = 400;
-        this.role.scale(0.6, 0.6);
+        this.role.scale(StringDefine.skinSmallNumber, StringDefine.skinSmallNumber);
         this.role.anchorX = 0.5;
         this.role.anchorY = 0.5;
         this.role.pos(this.width / 2, this.height / 2);

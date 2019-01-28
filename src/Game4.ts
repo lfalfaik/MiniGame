@@ -4,7 +4,7 @@
 module view {
     export class Game4 extends ui.Game4UI {
         private ScaleArr: Array<number> = [1, 2, 3];
-        private MoneyPos: Array<number> = [1070, 960, 850]
+        private MoneyPos: Array<number> = [875, 765, 655]
         private CurScaleIndex: number = 0;
         private HitHandler: Laya.Handler;
         private PlayerPoint: number = 0;
@@ -17,7 +17,7 @@ module view {
         private ReviveTimes: number = 0;
         constructor() {
             super();
-            var info: ModelInfo = ModelManager.Instance.GetInfoById(3);
+            var info: ModelInfo = ModelManager.Instance.GetInfoById(4);
             this.ModelData = ModelManager.Instance.GetDataById(info._id);
             if (this.ModelData != null)
                 this.PhaseData = ClientTools.GetGamePhaseDatas(this.ModelData.phase);

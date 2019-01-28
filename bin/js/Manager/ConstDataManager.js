@@ -35,10 +35,10 @@ var ConstDataManager = /** @class */ (function (_super) {
     });
     ConstDataManager.prototype.InitConf = function (func) {
         var _this = this;
-        ConfigManager.Instance.LoadConf("ConstValue", function (jsonObj) {
+        ConfigManager.Instance.LoadConf("Const", function (jsonObj) {
             _this.OnParseConf(jsonObj, func);
             if (func != null) {
-                Debuger.Log("1.读取 ConstValue.json Succ");
+                Debuger.Log("1.读取 Const.json Succ");
                 func();
             }
         });

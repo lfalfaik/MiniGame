@@ -205,7 +205,7 @@ class ScrollView extends Laya.Box  {
     /**
      * 单元格响应事件
      */
-    private onCellEvent(event:Event, cell: any) {
+    private onCellEvent(event:string, cell: any) {
         var index = this.getItemIndex(cell);
         if (index == -1) {
             return;
@@ -281,8 +281,8 @@ class ScrollView extends Laya.Box  {
     // ----------------------- mouse event start ------------------------
     private mouseDown() {
         if (this._mouseHandler != null) {
-            var e: Event = new Event(Laya.Event.MOUSE_DOWN);
-            this._mouseHandler.runWith([e]);
+            // var e: Event = new Event(Laya.Event.MOUSE_DOWN);
+            this._mouseHandler.runWith([Laya.Event.MOUSE_DOWN]);
         }
     }
 
@@ -291,8 +291,8 @@ class ScrollView extends Laya.Box  {
      */
     private mouseUp(event: string) {
         if (this._mouseHandler != null) {
-            var e: Event = new Event(Laya.Event.MOUSE_UP);
-            this._mouseHandler.runWith([e]);
+            // var e: Event = new Event(Laya.Event.MOUSE_UP);
+            this._mouseHandler.runWith([Laya.Event.MOUSE_UP]);
         }
     }
 
@@ -301,8 +301,8 @@ class ScrollView extends Laya.Box  {
      */
     private mouseMove() {
         if (this._mouseHandler != null) {
-            var e: Event = new Event(Laya.Event.MOUSE_MOVE);
-            this._mouseHandler.runWith([e]);
+            // var e: Event = new Event(Laya.Event.MOUSE_MOVE);
+            this._mouseHandler.runWith([Laya.Event.MOUSE_MOVE]);
         }
     }
     // ----------------------- mouse event end ------------------------

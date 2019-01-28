@@ -71,4 +71,7 @@ class StringDefine {
     static SOUND_CLICKBTN: string = "click_botton";// 点击按钮音效
     static SOUND_GAMEOVER: string = "game_over";//  游戏结束音效
     static SOUND_ADDSCORE: string = "score_add";// 加分音效
+
+    public static skinBigNumber:number = 1;
+    public static skinSmallNumber:number = 0.6;
 }

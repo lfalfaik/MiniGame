@@ -14,6 +14,7 @@ class GameMain {
 
         //设置竖屏
         Laya.stage.screenMode = Laya.Stage.SCREEN_VERTICAL;
+        Laya.URL.basePath = "https://sgame.enicen.com.cn/PigCollectMoney/";
         Laya.MiniAdpter.nativefiles = [
             "res/conf/ConstValue.json",
             "res/conf/LangString.json",
@@ -21,31 +22,43 @@ class GameMain {
             "res/conf/Skin.json",
             "res/img/share.jpg",
             "res/atlas/UILoading.atlas",
+            // "res/font/font_red.fnt",
+            // "res/font/font_red.png",
+            // "res/font/font_huang.fnt",
+            // "res/font/font_huang.png",
+            // "res/font/font_bai.fnt",
+            // "res/font/font_bai.png",
+            // "res/font/font_lv.fnt",
+            // "res/font/font_lv.png",
         ];
-        this._fontCount = 4;
-        FontManager.Instance._numberRedFont = new Laya.BitmapFont();
-        FontManager.Instance._numberRedFont.loadFont("res/font/font_red.fnt", Laya.Handler.create(this, this.OnLoadFontSucc));
+        Laya.loader.load("res/font/font_red.fnt", Laya.Handler.create(this, this.OnLoadFontRed), null, Laya.Loader.FONT);
+        Laya.loader.load("res/font/font_bai.fnt", Laya.Handler.create(this, this.OnLoadFontBai), null, Laya.Loader.FONT);
+        Laya.loader.load("res/font/font_huang.fnt", Laya.Handler.create(this, this.OnLoadFontHuang), null, Laya.Loader.FONT);
+        Laya.loader.load("res/font/font_lv.fnt", Laya.Handler.create(this, this.OnLoadFontLv), null, Laya.Loader.FONT);
+        // FontManager.Instance._numberRedFont = new Laya.BitmapFont();
+        // FontManager.Instance._numberRedFont.loadFont("res/font/font_red.fnt", Laya.Handler.create(this, this.OnLoadFontSucc));
 
-        FontManager.Instance._numberBaiFont = new Laya.BitmapFont();
-        FontManager.Instance._numberBaiFont.loadFont("res/font/font_bai.fnt", Laya.Handler.create(this, this.OnLoadFontSucc));
+        // FontManager.Instance._numberBaiFont = new Laya.BitmapFont();
+        // FontManager.Instance._numberBaiFont.loadFont("res/font/font_bai.fnt", Laya.Handler.create(this, this.OnLoadFontSucc));
 
-        FontManager.Instance._numberHuangFont = new Laya.BitmapFont();
-        FontManager.Instance._numberHuangFont.loadFont("res/font/font_huang.fnt", Laya.Handler.create(this, this.OnLoadFontSucc));
+        // FontManager.Instance._numberHuangFont = new Laya.BitmapFont();
+        // FontManager.Instance._numberHuangFont.loadFont("res/font/font_huang.fnt", Laya.Handler.create(this, this.OnLoadFontSucc));
 
-        FontManager.Instance._numberLvFont = new Laya.BitmapFont();
-        FontManager.Instance._numberLvFont.loadFont("res/font/font_lv.fnt", Laya.Handler.create(this, this.OnLoadFontSucc));
+        // FontManager.Instance._numberLvFont = new Laya.BitmapFont();
+        // FontManager.Instance._numberLvFont.loadFont("res/font/font_lv.fnt", Laya.Handler.create(this, this.OnLoadFontSucc));
     }
-    _fontCount: number = 5;
     // 加载字体完成
-    OnLoadFontSucc() {
-        this._fontCount--;
-        if (this._fontCount > 0)
-            return;
-        Laya.Text.registerBitmapFont(StringDefine.Font_RED, FontManager.Instance._numberRedFont);
-        Laya.Text.registerBitmapFont(StringDefine.FONT_BAI, FontManager.Instance._numberBaiFont);
-        Laya.Text.registerBitmapFont(StringDefine.FONT_HUANG, FontManager.Instance._numberHuangFont);
-        Laya.Text.registerBitmapFont(StringDefine.FONT_LV, FontManager.Instance._numberLvFont);
-
+    OnLoadFontRed(font: Laya.BitmapFont) {
+        Laya.Text.registerBitmapFont(StringDefine.Font_RED, font);
+    }
+    OnLoadFontBai(font: Laya.BitmapFont) {
+        Laya.Text.registerBitmapFont(StringDefine.FONT_BAI, font);
+    }
+    OnLoadFontHuang(font: Laya.BitmapFont) {
+        Laya.Text.registerBitmapFont(StringDefine.FONT_HUANG, font);
+    }
+    OnLoadFontLv(font: Laya.BitmapFont) {
+        Laya.Text.registerBitmapFont(StringDefine.FONT_LV, font);
         //加载loading界面需要的资源
         this.InitConfig();
     }
@@ -59,12 +72,6 @@ class GameMain {
     public InitRes() {
         GameConfig.initResize();
         GameUIManager.Instance.openUILoading();
-        
-        // var path = ConstDataManager.Instance.GetValue("URL_Base_Path", "");
-        var path = "";
-        if (path != "") {
-            Laya.URL.basePath = path;
-        }
 
         var resArray: Array<any> =
             [

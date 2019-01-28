@@ -21,12 +21,12 @@ var view;
         function Game4() {
             var _this = _super.call(this) || this;
             _this.ScaleArr = [1, 2, 3];
-            _this.MoneyPos = [1070, 960, 850];
+            _this.MoneyPos = [875, 765, 655];
             _this.CurScaleIndex = 0;
             _this.PlayerPoint = 0;
             _this.IsGameOver = false;
             _this.ReviveTimes = 0;
-            var info = ModelManager.Instance.GetInfoById(3);
+            var info = ModelManager.Instance.GetInfoById(4);
             _this.ModelData = ModelManager.Instance.GetDataById(info._id);
             if (_this.ModelData != null)
                 _this.PhaseData = ClientTools.GetGamePhaseDatas(_this.ModelData.phase);

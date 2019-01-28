@@ -20,8 +20,8 @@ var view;
         __extends(Game1, _super);
         function Game1() {
             var _this = _super.call(this) || this;
-            _this.Pos1 = [215, 1070];
-            _this.Pos2 = [500, 1070];
+            _this.Pos1 = [215, 985];
+            _this.Pos2 = [500, 985];
             _this.IsPlayerReverse = false;
             _this.MoneyPos1 = [215, -400];
             _this.MoneyPos2 = [500, -400];
@@ -75,6 +75,7 @@ var view;
             this.NextMoneyTime = this.CurPhaseData.Time;
             this.pointLbl.text = "得分：" + this.Point;
             this.player1.pos(this.Pos1[0], this.Pos1[1]);
+            this.player1.skewY = 0;
             Laya.timer.loop(100, this, this.CreateMoney);
         };
         Game1.prototype.OnChangePos = function () {
@@ -85,13 +86,13 @@ var view;
             this.PlayerMoveAnim.visible = true;
             this.PlayerMoveAnim.play(0, false, "PigBeat");
             if (this.IsPlayerReverse) {
-                this.PlayerMoveAnim.pos(140, -90);
-                this.PlayerMoveAnim.skewY = 180;
+                this.PlayerMoveAnim.pos(-50, -90);
+                this.player1.skewY = 180;
                 Laya.Tween.to(this.player1, { x: this.Pos2[0] }, 50);
             }
             else {
                 this.PlayerMoveAnim.pos(-40, -90);
-                this.PlayerMoveAnim.skewY = 0;
+                this.player1.skewY = 0;
                 Laya.Tween.to(this.player1, { x: this.Pos1[0] }, 50);
             }
         };
@@ -125,7 +126,7 @@ var view;
                 }
             }
             else {
-                if (money.y > 1170) {
+                if (money.y > 1085) {
                     if (money.Type == 1) {
                         this.GameOver();
                     }
@@ -216,7 +217,7 @@ var Game1Money = /** @class */ (function (_super) {
         Laya.timer.frameLoop(1, this, this.Move);
     };
     Game1Money.prototype.Move = function () {
-        if (this.y >= 1047) {
+        if (this.y >= 985) {
             if (this.HitDel != null) {
                 this.HitDel.runWith(this);
             }

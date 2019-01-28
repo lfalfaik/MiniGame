@@ -32,6 +32,7 @@ var view;
             _this.jumpSpeed = 8;
             _this.isClientJump = false;
             _this.lastAddScoreTime = 0;
+            _this.reviveTimes = 0;
             _this.wing = new Laya.Animation();
             _this.wing.pivot(96 / 2, 96 / 2);
             _this.wing.skewY = 180;
@@ -83,10 +84,14 @@ var view;
         };
         // 继续游戏
         Game7.prototype.OnGameContinue = function () {
+            if (this.reviveTimes >= 1)
+                return;
             this.clearHinder();
             this.init();
+            this.reviveTimes++;
         };
         Game7.prototype.init = function () {
+            this.reviveTimes = 0;
             this.dynMoveManager = new DynMoveManager((this.getChildByName("dynMoveArea")));
             this.hinderManager = new HinderManager((this.getChildByName("hinderGroup")));
             this.playerBody = this.player;
@@ -186,7 +191,7 @@ var view;
             Laya.timer.clear(this, this.onLoop);
             this.wing.stop();
             this.off(Laya.Event.CLICK, this, this.jump);
-            GameUIManager.Instance.OpenUIResult();
+            GameUIManager.Instance.OpenUIResult(this.reviveTimes);
             console.log("撞到障碍物 Game Over");
         };
         Game7.prototype.OnClosedPanel = function () {

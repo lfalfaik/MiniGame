@@ -128,6 +128,7 @@ var view;
                         army = this.armyBox.getChildAt(i);
                         if (army.Direction == Direction.Up && army.y >= Laya.stage.height / 2 - Game6Army.MoveY - this.ArmyBgOffset) {
                             this.PlayerPoint += army.Point;
+                            ClientEventManager.Instance.Event(ClientEvent.ON_SCORE_UPDATA, this.PlayerPoint); // 抛出消息：最新分数
                             army.Remove();
                         }
                     }
@@ -140,6 +141,7 @@ var view;
                         army = this.armyBox.getChildAt(i);
                         if (army.Direction == Direction.Down && army.y <= Laya.stage.height / 2 + Game6Army.MoveY + this.ArmyBgOffset) {
                             this.PlayerPoint += army.Point;
+                            ClientEventManager.Instance.Event(ClientEvent.ON_SCORE_UPDATA, this.PlayerPoint); // 抛出消息：最新分数
                             army.Remove();
                         }
                     }
@@ -152,6 +154,7 @@ var view;
                         army = this.armyBox.getChildAt(i);
                         if (army.Direction == Direction.Left && army.x >= Laya.stage.width / 2 - Game6Army.MoveX) {
                             this.PlayerPoint += army.Point;
+                            ClientEventManager.Instance.Event(ClientEvent.ON_SCORE_UPDATA, this.PlayerPoint); // 抛出消息：最新分数
                             army.Remove();
                         }
                     }
@@ -164,6 +167,7 @@ var view;
                         army = this.armyBox.getChildAt(i);
                         if (army.Direction == Direction.Right && army.x <= Laya.stage.width / 2 + Game6Army.MoveX) {
                             this.PlayerPoint += army.Point;
+                            ClientEventManager.Instance.Event(ClientEvent.ON_SCORE_UPDATA, this.PlayerPoint); // 抛出消息：最新分数
                             army.Remove();
                         }
                     }
@@ -230,7 +234,7 @@ var view;
             if (this.IsGameOver == false)
                 return;
             Laya.timer.clearAll(this);
-            GameUIManager.Instance.removeUI(this, true);
+            GameUIManager.Instance.removeUI(this, true, true);
         };
         return Game6;
     }(ui.Game6UI));

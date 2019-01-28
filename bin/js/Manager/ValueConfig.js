@@ -67,6 +67,8 @@ var StringDefine = /** @class */ (function () {
     StringDefine.SOUND_CLICKBTN = "click_botton"; // 点击按钮音效
     StringDefine.SOUND_GAMEOVER = "game_over"; //  游戏结束音效
     StringDefine.SOUND_ADDSCORE = "score_add"; // 加分音效
+    StringDefine.skinBigNumber = 1;
+    StringDefine.skinSmallNumber = 0.6;
     return StringDefine;
 }());
 //# sourceMappingURL=ValueConfig.js.map

@@ -21,7 +21,7 @@ var view;
         function Game2() {
             var _this = _super.call(this) || this;
             _this.IsLeftDown = false;
-            _this.PlayerPos = [1070, 960];
+            _this.PlayerPos = [974, 863];
             _this.Point = 0;
             _this.IsGameOver = false;
             _this.ReviveTimes = 0;
@@ -167,7 +167,7 @@ var Game2Money = /** @class */ (function (_super) {
         this.Speed = speed;
         this.skin = "Game2/hongbao_c.png";
         this.x = leftOrRight == 1 ? -this.width / 4 : Laya.stage.width + this.width / 4;
-        this.y = upOrDown == true ? 1000 : 1125;
+        this.y = upOrDown == true ? 803 : 928;
         this.size(325, 227);
         this.pivot(this.width / 2, this.height / 2);
         this.scale(0.5, 0.5);
@@ -176,7 +176,7 @@ var Game2Money = /** @class */ (function (_super) {
     };
     Game2Money.prototype.OnLoop = function () {
         if (this.LeftOrRight == 1) {
-            if (this.x >= 100) {
+            if (this.x >= 130) {
                 if (this.HitDel != null) {
                     this.HitDel.runWith(this);
                 }
@@ -185,7 +185,7 @@ var Game2Money = /** @class */ (function (_super) {
             this.x += this.Speed;
         }
         else if (this.LeftOrRight == 2) {
-            if (this.x <= 620) {
+            if (this.x <= 590) {
                 // if (this.HitDel != null) {
                 //     this.HitDel.runWith(this);
                 // }

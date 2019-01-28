@@ -17,7 +17,7 @@ class ConfigManager extends Singleton {
     public InitConfig(func: Function): void  {
         this._loadFunc = func;
         this._loadNum = 0;  
-        this._totalNum = 4;  //所有的配置文件数量
+        this._totalNum = 5;  //所有的配置文件数量
 
         {
             ConstDataManager.Instance.InitConf(()=>{
@@ -30,6 +30,9 @@ class ConfigManager extends Singleton {
                 this.OnLoadOnConf();
             });
             ModelManager.Instance.InitConf(()=>{
+                this.OnLoadOnConf();
+            });
+            NameManager.Instance.InitConf(()=>{
                 this.OnLoadOnConf();
             });
         }
