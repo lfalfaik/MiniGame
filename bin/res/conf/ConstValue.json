@@ -1,0 +1,30 @@
+[
+	{
+		"key":"txt_daojishitime",
+		"value":"3"
+	},
+	{
+		"key":"txt_default_skin_id",
+		"value":"120"
+	},
+	{
+		"key":"musicnames",
+		"value":"music_01"
+	},
+	{
+		"key":"gamepingtai",
+		"value":"wechat"
+	},
+	{
+		"key":"fenxiangstr",
+		"value":"我已长命百岁，你能坚持多久"
+	},
+	{
+		"key":"txt_playerid",
+		"value":"我已长命百岁，你能坚持多久"
+	},
+	{
+		"key":"URL_Base_Path",
+		"value":"https://sgame.enicen.com.cn/PigCollectMoney/"
+	}
+]

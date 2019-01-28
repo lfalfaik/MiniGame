@@ -1,0 +1,21 @@
+<res>
+   <item name="Game2/t11.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=45,0,60,0" picType="0" scale="0"/>
+   <item name="UILoading/slider_g.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=10,10,10,10" picType="0" scale="0"/>
+   <item name="MainView/mail_itembg.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=30,0,93,0" picType="0" scale="0"/>
+   <item name="MainView/main_score_bg.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=7,9,10,8" picType="0" scale="0"/>
+   <item name="MainView/main_guanggao_bg.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=6,5,8,5" picType="0" scale="0"/>
+   <item name="tongyong/anniu_1.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=44,47,50,46" picType="0" scale="0"/>
+   <item name="tongyong/anniu_2.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=51,65,66,57" picType="0" scale="0"/>
+   <item name="tongyong/anniu_1_select.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=34,27,33,31" picType="0" scale="0"/>
+   <item name="tongyong/bg_mask.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=6,16,10,14" picType="0" scale="0"/>
+   <item name="UIRank/touxiang_bg.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=22,40,41,31" picType="0" scale="0"/>
+   <item name="ui/rank_leftbtn_select.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=0,22,0,5" picType="0" scale="0"/>
+   <item name="ui/rank_huang.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=6,6,8,8" picType="0" scale="0"/>
+   <item name="ui/rank_headbg.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=5,10,7,5" picType="0" scale="0"/>
+   <item name="ui/rank_listbg.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=14,14,17,0" picType="0" scale="0"/>
+   <item name="ui/rank_bg1.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=26,25,25,25" picType="0" scale="0"/>
+   <item name="tongyong/anniu_3.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=22,20,18,19" picType="0" scale="0"/>
+   <item name="ui/tryplay_texbg.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=7,7,9,7" picType="0" scale="0"/>
+   <item name="ui/bg_money.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=25,34,19,30" picType="0" scale="0"/>
+   <item name="ui/skin_bg_shiyongzhong.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=48,65,45,60" picType="0" scale="0"/>
+</res>

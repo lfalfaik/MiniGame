@@ -1,0 +1,27 @@
+[
+	{
+		"key":"ready_time",
+		"value":"3"
+	},
+	{
+		"key":"txt_daojishitime",
+		"value":"3"
+	},
+	{
+		"key":"txt_default_skin_id",
+		"value":"10"
+	},
+	{
+		"key":"musicnames",
+		"value":"music_01,music_02,music_03"
+	},
+	{
+		"key":"gamepingtai",
+		"value":"wechat"
+	},
+	{
+		"key":"fenxiangstr",
+		"value":"我已长命百岁，你能坚持多久？"
+	}
+
+]
