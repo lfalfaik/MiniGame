@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":62,
+    "selecteID":9,
     "props":{"y":0,"x":0,"width":720,"sceneColor":null,"height":1280},
     "nodeParent":-1,
     "label":"View",
@@ -251,13 +251,14 @@
             "props":{"x":360,"var":"ui_bottom","bottom":0},
             "nodeParent":1,
             "label":"Label(ui_bottom)",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":65,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":-235,"x":1,"width":322,"var":"btn_gamestart","skin":"tongyong/anniu_1.png","name":"btn_gamestart","height":119,"anchorY":0.5,"anchorX":0.5},
                     "nodeParent":65,
@@ -296,6 +297,7 @@
                     "$HIDDEN":true
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":-235,"x":1,"width":322,"var":"btn_tryplay","skin":"tongyong/anniu_2.png","sizeGrid":"51,65,66,57","name":"btn_tryplay","height":119,"anchorY":0.5,"anchorX":0.5},
                     "nodeParent":65,
@@ -333,8 +335,9 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
-                    "props":{"y":-75,"x":-67,"width":103,"var":"btn_rank","skin":"MainView/main_rank.png","name":"btn_rank","height":122,"anchorY":0.5,"anchorX":0.5},
+                    "props":{"y":-87,"x":-124,"width":103,"var":"btn_rank","skin":"MainView/main_rank.png","name":"btn_rank","height":122,"anchorY":0.5,"anchorX":0.5},
                     "nodeParent":65,
                     "label":"Image(btn_rank)",
                     "isOpen":false,
@@ -359,8 +362,9 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
-                    "props":{"y":-75,"x":63,"width":103,"var":"btn_share","skin":"MainView/main_share.png","name":"btn_share","height":122,"anchorY":0.5,"anchorX":0.5},
+                    "props":{"y":-87,"x":6,"width":103,"var":"btn_share","skin":"MainView/main_share.png","name":"btn_share","height":122,"anchorY":0.5,"anchorX":0.5},
                     "nodeParent":65,
                     "label":"Image(btn_share)",
                     "isOpen":false,
@@ -385,8 +389,9 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
-                    "props":{"y":-75,"x":193,"width":103,"var":"btn_music","skin":"MainView/main_music.png","name":"btn_music","height":122,"anchorY":0.5,"anchorX":0.5},
+                    "props":{"y":-87,"x":136,"width":103,"var":"btn_music","skin":"MainView/main_music.png","name":"btn_music","height":122,"anchorY":0.5,"anchorX":0.5},
                     "nodeParent":65,
                     "label":"Image(btn_music)",
                     "isOpen":false,
@@ -448,8 +453,9 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
-                    "props":{"y":-75,"x":-197,"width":103,"var":"btn_shengxiao","skin":"MainView/main_shengxiao.png","name":"btn_shengxiao","height":122,"anchorY":0.5,"anchorX":0.5},
+                    "props":{"y":-69,"x":-263,"width":103,"var":"btn_shengxiao","skin":"MainView/main_shengxiao.png","name":"btn_shengxiao","height":122,"anchorY":0.5,"anchorX":0.5},
                     "nodeParent":65,
                     "label":"Image(btn_shengxiao)",
                     "isOpen":false,

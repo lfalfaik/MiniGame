@@ -86,7 +86,7 @@ var GameMain = /** @class */ (function () {
         GameUIManager.Instance.setUILoadingProgress(value);
     };
     GameMain.prototype.OnLoadFinished = function () {
-        PlayerManager.Instance._PlayerId = ConstDataManager.Instance.GetValue("txt_playerid", "tetetetet1");
+        PlayerManager.Instance._PlayerId = ConstDataManager.Instance.GetValue("txt_playerid", "tetete1tet1");
         Debuger.Log("读取json成功");
         //初始化玩家数据
         SaveDataManager.Instance.LoadUserData();

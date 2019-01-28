@@ -22,7 +22,7 @@ module view {
         this.btn_shengxiao.on(Laya.Event.CLICK,this,this.OnShengXiaoBtnClick);
         this.btn_rank.on(Laya.Event.CLICK,this,this.OnRankBtnClick);
         this.btn_share.on(Laya.Event.CLICK,this,this.OnShareBtnClick);
-        
+        this.btn_shengxiao.visible= false;
         this.btn_left.on(Laya.Event.CLICK,this,this.OnLeftBtnClick);
         this.btn_right.on(Laya.Event.CLICK,this,this.OnRightBtnClick);
         this.btn_gamestart.on(Laya.Event.CLICK,this,this.OnGameStartBtnClick);
